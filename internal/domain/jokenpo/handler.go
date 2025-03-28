@@ -2,6 +2,7 @@ package jokenpo
 
 import (
 	"math/rand"
+	"net/http"
 	"strconv"
 
 	"github.com/gofiber/fiber/v3"
@@ -26,7 +27,10 @@ func (h *HTTPHandler) Play(c fiber.Ctx) error {
 	}
 
 	if playerOption < 0 || playerOption > 2 {
-		return fiber.NewError(fiber.StatusBadRequest, "valid options are: 0 (Pedra), 1 (Papel), or 2 (Tesoura)")
+		return c.Status(http.StatusBadRequest).
+			JSON(map[string]string{
+				"message": "valid options are: 0 (Pedra), 1 (Papel), or 2 (Tesoura)",
+			})
 	}
 
 	computerOption := rand.Intn(2)
