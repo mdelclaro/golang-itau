@@ -1,7 +1,7 @@
 package jokenpo
 
 import (
-	"golang-itau/internal/pkg/entity/jokenpo"
+	"golang-jokenpo/internal/pkg/entity/jokenpo"
 )
 
 type Service struct {

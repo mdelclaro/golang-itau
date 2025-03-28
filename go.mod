@@ -1,4 +1,4 @@
-module golang-itau
+module golang-jokenpo
 
 go 1.23
 

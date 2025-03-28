@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"golang-itau/internal/domain/jokenpo"
-	jokenpo_entity "golang-itau/internal/pkg/entity/jokenpo"
+	"golang-jokenpo/internal/domain/jokenpo"
+	jokenpo_entity "golang-jokenpo/internal/pkg/entity/jokenpo"
 )
 
 func TestPlay(t *testing.T) {

@@ -5,8 +5,8 @@ import (
 
 	"github.com/gofiber/fiber/v3"
 
-	"golang-itau/internal/config"
-	"golang-itau/internal/domain/jokenpo"
+	"golang-jokenpo/internal/config"
+	"golang-jokenpo/internal/domain/jokenpo"
 )
 
 func main() {
