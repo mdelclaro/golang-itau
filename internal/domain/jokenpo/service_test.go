@@ -1,7 +1,6 @@
 package jokenpo_test
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -66,9 +65,6 @@ func TestPlay(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			result, moves := service.Play(tt.playerOption, tt.computerOption)
-
-			fmt.Println(tt)
-			fmt.Println(result, moves)
 
 			assert.Equal(t, tt.expectedWinner, result)
 			assert.Equal(t, service.Options[tt.playerOption], moves[0])

@@ -25,6 +25,10 @@ func (h *HTTPHandler) Play(c fiber.Ctx) error {
 		return err
 	}
 
+	if playerOption < 0 || playerOption > 2 {
+		return fiber.NewError(fiber.StatusBadRequest, "valid options are: 0 (Pedra), 1 (Papel), or 2 (Tesoura)")
+	}
+
 	computerOption := rand.Intn(2)
 
 	winner, options := h.service.Play(playerOption, computerOption)
