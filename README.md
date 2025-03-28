@@ -1,4 +1,4 @@
-# Golang Jokenpo
+# Golang Jokenpo (rock-paper-scissors)
 
 
 ## ⚡️ Running The Application
